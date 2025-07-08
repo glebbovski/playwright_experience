@@ -55,27 +55,27 @@ public class PlaywrightFactory {
         switch (browserName.toLowerCase()) {
             case "chromium":
                 tlBrowser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions()
-                        .setHeadless(false)
+                        .setHeadless(true)
                         .setArgs(Arrays.asList("--start-maximized"))));
                 break;
             case "firefox":
                 tlBrowser.set(getPlaywright().firefox().launch(new BrowserType.LaunchOptions()
-                        .setHeadless(false)
+                        .setHeadless(true)
                         .setArgs(Arrays.asList("--start-maximized"))));
                 break;
             case "safari":
                 tlBrowser.set(getPlaywright().webkit().launch(new BrowserType.LaunchOptions()
-                        .setHeadless(false)
+                        .setHeadless(true)
                         .setArgs(Arrays.asList("--start-maximized"))));
                 break;
             case "chrome":
                 tlBrowser.set(getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome")
-                        .setHeadless(false)
+                        .setHeadless(true)
                         .setArgs(Arrays.asList("--start-maximized"))));
                 break;
             case "edge":
                 tlBrowser.set(getPlaywright().chromium().launch(new LaunchOptions().setChannel("msedge")
-                        .setHeadless(false)
+                        .setHeadless(true)
                         .setArgs(Arrays.asList("--start-maximized"))));
                 break;
 
